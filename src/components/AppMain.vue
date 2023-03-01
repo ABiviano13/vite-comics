@@ -6,26 +6,32 @@ export default {
             arrayListBuy: [
                 {
                     image: '/img/buy-comics-digital-comics.png',
-                    text: 'Digital Comics'
+                    text: 'Digital Comics',
+                    height: 50
                 },
                 {
                     image: '/img/buy-comics-merchandise.png',
-                    text: 'Dc Merchandise'
-                },
-                {
-                    image: '/img/buy-comics-shop-locator.png',
-                    text: 'Subscription'
+                    text: 'Dc Merchandise',
+                    height: 50
                 },
                 {
                     image: '/img/buy-comics-subscriptions.png',
-                    text: 'Comic Shop Locator'
+                    text: 'Subscription',
+                    height: 50
+                },
+                {
+                    image: '/img/buy-comics-shop-locator.png',
+                    text: 'Comic Shop Locator',
+                    height: 50
                 },
                 {
                     image: '/img/buy-dc-power-visa.svg',
-                    text: 'Dc Power Visa'
+                    text: 'Dc Power Visa',
+                    height: 30
                 },
 
-            ]
+            ],
+            currentIndex: 0
             
         }
     }
@@ -89,7 +95,6 @@ main{
         }
 
         img {
-            width: 44px;
             height: 50px;
         }
 
