@@ -13,7 +13,8 @@ export default {
                 'Videos', 
                 'Fans', 
                 'News'
-            ]
+            ],
+            currentIndex: 0
         }
     }
 }
@@ -27,7 +28,9 @@ export default {
             <div class="row">
                 <img class="col" src="/public/img/dc-logo.png" alt="">
                 <ul class="col">
-                    <li class="a-header" v-for="listItem in arrayListItemHeader">
+                    <li class="a-header"
+                    v-for=" listItem in arrayListItemHeader"
+                    >
                         {{ listItem }}
                     </li>
                 </ul>
@@ -57,13 +60,11 @@ $blue: #338af9;
         gap: 30px;
 
         li{
+            // padding-bottom: 50px;
             &:hover {
                 color: $blue;
+                // border-bottom: 5px solid $blue;
             }
-            // &:before {
-            //     padding: 10px;
-            //     color: $blue;
-            // }
         }
     }
 }

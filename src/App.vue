@@ -20,10 +20,11 @@ export default {
 </script>
 
 <template>
-  
+
   <div class="container">
     <AppHeader></AppHeader>
   </div>
+  <AppMain></AppMain>
   
 </template>
 
