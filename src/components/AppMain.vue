@@ -36,14 +36,14 @@ export default {
 <template>
 
     <main>
-        <section class="section-content">
+        <div class="section-content">
             <div class="container">
-            <h2>
-                Content
-            </h2>
+                <h2>
+                    Content
+                </h2>
+            </div>
         </div>
-        </section>
-        <section class="section-content-buy">
+        <div class="section-content-buy">
             <div class="container">
                 <ul class="list-buy">
                     <li class="list-item-buy"
@@ -53,7 +53,7 @@ export default {
                     </li>
                 </ul>
             </div>
-        </section>
+        </div>
     </main>
 
 </template>
@@ -84,12 +84,13 @@ main{
                 display: flex;
                 align-items: center;
                 gap: 15px;
+                text-transform: uppercase;
             }
         }
 
         img {
-            width: 54px;
-            height: 64px;
+            width: 44px;
+            height: 50px;
         }
 
     }

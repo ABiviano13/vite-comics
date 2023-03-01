@@ -58,6 +58,7 @@ $blue: #338af9;
     .col{
         display: flex;
         gap: 30px;
+        text-transform: uppercase;
 
         li{
             // padding-bottom: 50px;
