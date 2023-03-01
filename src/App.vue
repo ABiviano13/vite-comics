@@ -21,10 +21,9 @@ export default {
 
 <template>
 
-  <div class="container">
-    <AppHeader></AppHeader>
-  </div>
+  <AppHeader></AppHeader>
   <AppMain></AppMain>
+  <AppFooter></AppFooter>  
   
 </template>
 
