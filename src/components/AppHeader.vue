@@ -41,11 +41,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-// @use '../style/partials/variables' as *;
+@use '../style/partials/variables' as *;
 
-$black: #1c1c1c;
-$gray-dark: #303030;
-$blue: #338af9;
 .row {
     display: flex;
     align-items: center;
