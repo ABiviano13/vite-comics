@@ -26,7 +26,7 @@ export default {
     <header>
         <div class="container">
             <div class="row">
-                <img class="col" src="/public/img/dc-logo.png" alt="">
+                <img class="col" src="/img/dc-logo.png" alt="">
                 <ul class="col">
                     <li class="a-header"
                     v-for=" listItem in arrayListItemHeader"
@@ -41,9 +41,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// @use '../style/partials/variables' as *;
 
+$black: #1c1c1c;
+$gray-dark: #303030;
 $blue: #338af9;
-
 .row {
     display: flex;
     align-items: center;

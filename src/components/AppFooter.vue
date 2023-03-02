@@ -3,53 +3,53 @@
 export default {
     data() {
         return {
-            // arraylinkFooter: [
-            //     {
-            //         title: 'Dc Comics',
-            //         link: [
-            //             'Characters',
-            //             'Comics',
-            //             'Movies',
-            //             'TV',
-            //             'Games',
-            //             'Videos',
-            //             'News'
-            //         ]
-            //     },
-            //     {
-            //         title: 'Shop',
-            //         link: [
-            //             'Shop DC',
-            //             'Shop DC Collectibles'
-            //         ]
-            //     },
-            //     {
-            //         title: 'Dc',
-            //         link: [
-            //             'Terms Of Use',
-            //             'Privacy policy (New)',
-            //             'Ad Choices',
-            //             'Advertising',
-            //             'Jobs',
-            //             'Subscriptions',
-            //             'Talent Workshops',
-            //             'CPSC Certificates',
-            //             'Ratings',
-            //             'Shop Help',
-            //             'Contact Us'
-            //         ]
-            //     },
-            //     {
-            //         title: 'Sites',
-            //         link: [
-            //             'DC',
-            //             'MAD Magazine',
-            //             'DC Kids',
-            //             'DC Universe',
-            //             'DC Power Visa'
-            //         ]
-            //     },
-            // ]
+            arraylinkFooter: [
+                {
+                    title: 'Dc Comics',
+                    link: [
+                        'Characters',
+                        'Comics',
+                        'Movies',
+                        'TV',
+                        'Games',
+                        'Videos',
+                        'News'
+                    ],
+                    shop: [{
+                        title: 'Shop',
+                        link: [
+                            'Shop DC',
+                            'Shop DC Collectibles'
+                        ]
+                    }]
+                },
+                {
+                    title: 'Dc',
+                    link: [
+                        'Terms Of Use',
+                        'Privacy policy (New)',
+                        'Ad Choices',
+                        'Advertising',
+                        'Jobs',
+                        'Subscriptions',
+                        'Talent Workshops',
+                        'CPSC Certificates',
+                        'Ratings',
+                        'Shop Help',
+                        'Contact Us'
+                    ]
+                },
+                {
+                    title: 'Sites',
+                    link: [
+                        'DC',
+                        'MAD Magazine',
+                        'DC Kids',
+                        'DC Universe',
+                        'DC Power Visa'
+                    ]
+                },
+            ],
 
             arrayIcon: [
                 '/img/footer-facebook.png',
@@ -72,116 +72,25 @@ export default {
         <div class="section-link">
             <div class="container">
                 <div class="link">
-                    <!-- <ul v-for="objectLink in arraylinkFooter">
-                        <h3>
+                    <ul v-for="objectLink in arraylinkFooter">
+                        <h3 class="title">
                             {{ objectLink.title }}
                         </h3>
-                        <li v-for="link in objectLink.link">
+                        <li class="text"
+                        v-for="link in objectLink.link">
                             {{ link }}
                         </li>
-                    </ul> -->
-                    <div>
-                        <ul class="comics-link">
-                            <h2 class="title">
-                                Dc Comics
-                            </h2>
-                            <li>
-                                Characters
-                            </li>
-                            <li>
-                                Comics
-                            </li>
-                            <li>
-                                Movies
-                            </li>
-                            <li>
-                                TV
-                            </li>
-                            <li>
-                                Games
-                            </li>
-                            <li>
-                                Videos
-                            </li>
-                            <li>
-                                News
+                        <ul class="shopUl"
+                        v-for="shop in objectLink.shop">
+                            <h3 class="title">
+                                {{ shop.title }}
+                            </h3>
+                            <li class="text"
+                            v-for="linkShop in shop.link">
+                                {{ linkShop }}
                             </li>
                         </ul>
-                        <ul>
-                            <h2 class="title">
-                                Shop
-                            </h2>
-                            <li>
-                                Shop DC
-                            </li>
-                            <li>
-                                Shop DC Collectibles
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <h2 class="title">
-                                DC
-                            </h2>
-                            <li>
-                                Terms Of Use
-                            </li>
-                            <li>
-                                Privacy policy (New)
-                            </li>
-                            <li>
-                                Ad Choices
-                            </li>
-                            <li>
-                                Advertising
-                            </li>
-                            <li>
-                                Jobs
-                            </li>
-                            <li>
-                                Subscriptions
-                            </li>
-                            <li>
-                                Talent Workshops
-                            </li>
-                            <li>
-                                CPSC Certificates
-                            </li>
-                            <li>
-                                Ratings
-                            </li>
-                            <li>
-                                Shop Help
-                            </li>
-                            <li>
-                                Contact Us
-                            </li>
-                            
-                        </ul>
-                    </div>
-                    <div>
-                        <ul>
-                            <h2 class="title">
-                                Sites
-                            </h2>
-                            <li>
-                                DC
-                            </li>
-                            <li>
-                                MAD Magazine
-                            </li>
-                            <li>
-                                DC Kids
-                            </li>
-                            <li>
-                                DC Universe
-                            </li>
-                            <li>
-                                DC Power Visa
-                            </li>
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
                 <div class="logo">
                     <img src="/img/dc-logo-bg.png" alt="logo-big">
@@ -212,7 +121,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// @use '../style/partials/variables' as *;
 
+$black: #1c1c1c;
 $gray-dark: #303030;
 $blue: #338af9;
 
@@ -237,9 +148,6 @@ footer {
                 display: flex;
                 gap: 25px;
 
-                .comics-link{
-                    padding-bottom: 25px ;
-                }
                 .title{
                     padding-bottom: 20px;
                     text-transform: uppercase;
@@ -249,6 +157,10 @@ footer {
                     font-size: 10px;
                     padding-bottom: 8px;
                     color: gray;
+                }
+
+                .shopUl{
+                    padding-top: 25px
                 }
             }
         }

@@ -65,8 +65,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
 $black: #1c1c1c;
+$gray-dark: #303030;
 $blue: #338af9;
 
 main{
