@@ -121,19 +121,17 @@ export default {
         </div>
         <div class="section-content">
             <div class="container">
-                <div class="card-content grid">
-                    <ul>
-                        <li class="section-cards"
-                        v-for="card in cards">
-                            <figure>
-                                <img :src="card.thumb" alt="">
-                            </figure>
-                            <div class="text-card">
-                                {{ card.series }}
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="card-list">
+                    <li class="card"
+                    v-for="card in cards">
+                        <figure>
+                            <img :src="card.thumb" alt="">
+                        </figure>
+                        <div class="text-card">
+                            {{ card.series }}
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="section-content-buy">
@@ -172,6 +170,27 @@ main{
     .section-content {
         background-color: $black;
         padding: 54px 0;
+
+        .card-list{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 30px;
+            row-gap: 50px;
+
+            .card{
+
+                img{
+                    width: 180px;
+                    aspect-ratio: 1/1;
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                .text-card{
+                    text-transform: uppercase;
+                }
+            }
+        }
     }
 
     .section-content-buy {
