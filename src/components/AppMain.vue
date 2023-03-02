@@ -31,7 +31,81 @@ export default {
                 },
 
             ],
-            currentIndex: 0
+
+            cards: [
+                {
+                    "thumb": "./public/img/actioncomics.jpg",
+                    "price": "$19.99",
+                    "series": "Action Comics",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "./public/img/americanvampire1976.jpg",
+                    "price": "$3.99",
+                    "series": "American Vampire 1976",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "./public/img/acquaman.jpg",
+                    "price": "$16.99",
+                    "series": "Aquaman",
+                    "type": "graphic novel"
+                },
+                {
+                    "thumb": "./public/img/Batgirl.jpg",
+                    "price": "$2.99",
+                    "series": "Batgirl",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "./public/img/batman.jpg",
+                    "price": "$3.99",
+                    "series": "Batman",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "./public/img/batmanbeyond.jpg",
+                    "price": "$2.99",
+                    "series": "Batman Beyond",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "./public/img/batmanvssuperman.jpg",
+                    "price": "$3.99",
+                    "series": "Batman/Superman",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "./public/img/batmanvssupermanannual.jpg",
+                    "price": "$4.99",
+                    "series": "Batman/Superman Annual",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "./public/img/batmanjoker.jpg",
+                    "price": "$5.99",
+                    "series": "Batman: The Joker War Zone",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "./public/img/batmanthreejoker.jpg",
+                    "price": "$6.99",
+                    "series": "Batman: Three Jokers",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "./public/img/batmanharleyqueen.jpg",
+                    "price": "$4.99",
+                    "series": "Batman: White Knight Presents: Harley Quinn",
+                    "type": "comic book"
+                },
+                {
+                    "thumb": "./public/img/catwoman.jpg",
+                    "price": "$16.99",
+                    "series": "Catwoman",
+                    "type": "graphic novel"
+               }
+            ]
             
         }
     }
@@ -47,9 +121,19 @@ export default {
         </div>
         <div class="section-content">
             <div class="container">
-                <h2>
-                    Content
-                </h2>
+                <div class="card-content grid">
+                    <ul>
+                        <li class="section-cards"
+                        v-for="card in cards">
+                            <figure>
+                                <img :src="card.thumb" alt="">
+                            </figure>
+                            <div class="text-card">
+                                {{ card.series }}
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="section-content-buy">
@@ -80,8 +164,8 @@ main{
             height: 100%;
             width: 100%;
             aspect-ratio: 1/1;
-           object-fit: cover;
-           object-position: top;
+            object-fit: cover;
+            object-position: top;
         }
     }
 
