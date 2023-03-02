@@ -42,6 +42,9 @@ export default {
 <template>
 
     <main>
+        <div class="section-jumbotron">
+            <img src="/img/jumbotron.jpg" alt="">
+        </div>
         <div class="section-content">
             <div class="container">
                 <h2>
@@ -70,6 +73,17 @@ export default {
 
 main{
     color: white;
+
+    .section-jumbotron{
+        height: 400px;
+        img{
+            height: 100%;
+            width: 100%;
+            aspect-ratio: 1/1;
+           object-fit: cover;
+           object-position: top;
+        }
+    }
 
     .section-content {
         background-color: $black;
