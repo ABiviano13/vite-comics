@@ -1,9 +1,11 @@
 <script>
 import card from './AppCard.vue'; 
+import cardBuy from './AppCardBuy.vue';
 
 export default {
     components: {
-        card
+        card,
+        cardBuy
     },
     data() {
         return {
@@ -131,21 +133,14 @@ export default {
                     </h3>
                 </div>
                 <ul class="card-list">
-                    <!-- <li class="card"
-                    v-for="card in cards">
-                        <figure>
-                            <img :src="card.thumb" alt="">
-                        </figure>
-                        <div class="text-card">
-                            {{ card.series }}
-                        </div>
-                    </li> -->
+
                     <card 
                     v-for="(card,i) in cards" :key="i"
                     :image="card.thumb"
                     :text="card.series"
                     >
                     </card>
+
                 </ul>
                 <div class="button style-target-button">
                     Load More
@@ -155,11 +150,14 @@ export default {
         <div class="section-content-buy">
             <div class="container">
                 <ul class="list-buy">
-                    <li class="list-item-buy"
-                    v-for="cardBuy in arrayListBuy">
-                        <img :src="cardBuy.image" alt="">
-                        {{ cardBuy.text }}
-                    </li>
+
+                    <cardBuy 
+                    v-for="(cardBuy) in arrayListBuy" :key="i"
+                    :image="cardBuy.image"
+                    :text="cardBuy.text"
+                    >
+                    </cardBuy>
+                    
                 </ul>
             </div>
         </div>
@@ -194,20 +192,6 @@ main{
             grid-template-columns: repeat(6, 1fr);
             gap: 30px;
             row-gap: 50px;
-
-            // .card{
-
-            //     img{
-            //         width: 180px;
-            //         aspect-ratio: 1/1;
-            //         object-fit: cover;
-            //         object-position: center;
-            //     }
-
-            //     .text-card{
-            //         text-transform: uppercase;
-            //     }
-            // }
         }
 
         .style-target-button{
@@ -238,17 +222,6 @@ main{
             display: flex;
             align-items: center;
             justify-content: space-between;
-
-            .list-item-buy {
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                text-transform: uppercase;
-            }
-        }
-
-        img {
-            height: 50px;
         }
 
     }
