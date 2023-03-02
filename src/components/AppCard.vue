@@ -36,6 +36,7 @@ export default {
         aspect-ratio: 1/1;
         object-fit: cover;
         object-position: center;
+        margin-bottom: 18px;
     }
 
     .text-card{

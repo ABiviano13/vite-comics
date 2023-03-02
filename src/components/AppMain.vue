@@ -125,6 +125,11 @@ export default {
         </div>
         <div class="section-content">
             <div class="container">
+                <div class="target style-target-button">
+                    <h3>
+                        Current Series
+                    </h3>
+                </div>
                 <ul class="card-list">
                     <!-- <li class="card"
                     v-for="card in cards">
@@ -140,9 +145,11 @@ export default {
                     :image="card.thumb"
                     :text="card.series"
                     >
-
                     </card>
                 </ul>
+                <div class="button style-target-button">
+                    Load More
+                </div>
             </div>
         </div>
         <div class="section-content-buy">
@@ -201,6 +208,25 @@ main{
             //         text-transform: uppercase;
             //     }
             // }
+        }
+
+        .style-target-button{
+            background-color: $blue;
+            width: max-content;
+            text-transform: uppercase;
+        }
+
+        .target{
+            position: relative;
+            bottom: 85px;
+            padding: 15px 30px;
+        }
+
+        .button{
+            margin: 0 auto;
+            padding: 10px 60px;
+            margin-top: 50px;
+            font-weight: bold;
         }
     }
 
