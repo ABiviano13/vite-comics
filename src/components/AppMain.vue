@@ -1,6 +1,10 @@
 <script>
+import card from './AppCard.vue'; 
 
 export default {
+    components: {
+        card
+    },
     data() {
         return {
             arrayListBuy: [
@@ -122,7 +126,7 @@ export default {
         <div class="section-content">
             <div class="container">
                 <ul class="card-list">
-                    <li class="card"
+                    <!-- <li class="card"
                     v-for="card in cards">
                         <figure>
                             <img :src="card.thumb" alt="">
@@ -130,7 +134,14 @@ export default {
                         <div class="text-card">
                             {{ card.series }}
                         </div>
-                    </li>
+                    </li> -->
+                    <card 
+                    v-for="(card,i) in cards" :key="i"
+                    :image="card.thumb"
+                    :text="card.series"
+                    >
+
+                    </card>
                 </ul>
             </div>
         </div>
@@ -177,19 +188,19 @@ main{
             gap: 30px;
             row-gap: 50px;
 
-            .card{
+            // .card{
 
-                img{
-                    width: 180px;
-                    aspect-ratio: 1/1;
-                    object-fit: cover;
-                    object-position: center;
-                }
+            //     img{
+            //         width: 180px;
+            //         aspect-ratio: 1/1;
+            //         object-fit: cover;
+            //         object-position: center;
+            //     }
 
-                .text-card{
-                    text-transform: uppercase;
-                }
-            }
+            //     .text-card{
+            //         text-transform: uppercase;
+            //     }
+            // }
         }
     }
 
